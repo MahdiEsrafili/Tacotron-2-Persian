@@ -53,7 +53,19 @@ sh scripts/tacotron2persian_commonvoice_fa/generate.sh
 ```
 
 ## Demo
-To only test the model, I've provided a demo script folder that also contains the checkpoints for Tacotron and WaveRNN. Download the demo experiment zip from:<br>
+To only test the model, I've provided a demo script folder that also contains the checkpoints for Tacotron and WaveRNN. 
+first install pytorch with respect to your system specification. then install python requirements with:
+
+```
+pip install -r requirements.txt
+```
+
+also install espeak:
+
+```
+sudo apt-get install espeak
+```
+Download the demo experiment zip from:<br>
 https://drive.google.com/file/d/1wzlBGgROS76W4xOY1UpCZaW5zropyLVL/view?usp=sharing
 <br>
 and unzip it under `./scripts/` folder. Similar to what explained in the `Inference` section, you just need to run:
