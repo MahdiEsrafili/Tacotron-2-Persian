@@ -74,7 +74,7 @@ def preprocess(dataset_path, output_path, target_speakers, config, num_workers):
         lines = all_lines_final[speaker]
         count_files = len(lines)
 
-        for itr, line in enumerate(lines[:20]):
+        for itr, line in enumerate(lines): #for itr, line in enumerate(lines[:20]):
             file_name, text = line
             file_name_ = speaker_name + "_" + file_name.split(".")[0]
             source_audio_path = os.path.join(dataset_path, "clips", file_name)
