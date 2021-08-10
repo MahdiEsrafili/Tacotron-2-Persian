@@ -58,6 +58,7 @@ class Encoder(nn.Module):
                 x = self.conv_layers[i](x)
 
         # Pack the padded input sequences 
+        x_lens = x_lens.cpu()
         x = pack_padded_sequence(x.transpose(1,2), x_lens, batch_first=True)
         self.blstm.flatten_parameters()
         x, _ = self.blstm(x)
